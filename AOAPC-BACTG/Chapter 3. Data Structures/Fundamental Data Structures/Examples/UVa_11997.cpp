@@ -32,6 +32,7 @@ void merge(int *a, int *b, int *c, int n) {
 
         int cur = item.b;
         if (cur + 1 < n) q.push(Item(item.s - b[cur] + b[cur + 1], cur + 1));
+        // judge whether cur + 1 < n, avoid program trying to get b[n + 1].
     }
 }
 
