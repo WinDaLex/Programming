@@ -8,6 +8,4 @@ Contests Training Guide.
 The ACM-ICPC and the two books are a great help to my programming capability
 and my road of the programmer, so I should thank ACM-ICPC and Rujia Liu.
 
-Hehe~
-
-- by A Code Rabbit
+HINT: The solutions of most problems can be found in [wiki](https://github.com/windalex/ACM-ICPC/wiki).
