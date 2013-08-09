@@ -1,32 +1,38 @@
-// UVaOJ 340
+// UVa 340
 // Master-Mind Hints
 // by A Code Rabbit
 
 #include <cstdio>
-#include <set>
 #include <vector>
+#include <set>
 using namespace std;
 
-const int MAXN = 100000;
+typedef multiset<int>::iterator iter;
 
-int n;
+const int MAXN = 100002;
+
+int N;
 int code[MAXN];
 int guess[MAXN];
 
 int main() {
-    int cnt_case = 0;
-    while (scanf("%d", &n) && n) {
-        for (int i = 0; i < n; i++)
+    int T = 0;
+    while (scanf("%d", &N) == 1 && N) {
+        for (int i = 0; i < N; i++)
             scanf("%d", &code[i]);
-        printf("Game %d:\n", ++cnt_case);
+
+        printf("Game %d:\n", ++T);
         while (1) {
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < N; i++)
                 scanf("%d", &guess[i]);
+
             if (!guess[0]) break;
+
             int strong = 0, weak = 0;
             vector<int> que;
             multiset<int> ans;
-            for (int i = 0; i < n; i++) {
+
+            for (int i = 0; i < N; i++) {
                 if (code[i] != guess[i]) {
                     que.push_back(code[i]);
                     ans.insert(guess[i]);
@@ -34,13 +40,15 @@ int main() {
                     strong++;
                 }
             }
-            for (int i = 0; i< que.size(); i++) {
-                multiset<int>::iterator iter = ans.find(que[i]);
-                if (iter != ans.end()) {
+
+            for (int i = 0; i < que.size(); i++) {
+                iter it = ans.find(que[i]);
+                if (it != ans.end()) {
                     weak++;
-                    ans.erase(iter);
+                    ans.erase(it);
                 }
             }
+
             printf("    (%d,%d)\n", strong, weak);
         }
     }

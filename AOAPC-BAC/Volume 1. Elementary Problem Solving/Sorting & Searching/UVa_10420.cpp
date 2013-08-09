@@ -1,4 +1,4 @@
-// UVaOJ 10420
+// UVa 10420
 // List of Conquests
 // by A Code Rabbit
 
@@ -7,30 +7,29 @@
 #include <string>
 using namespace std;
 
+typedef map<string, int>::iterator iter;
 const int MAXN = 75;
 
-int n;
+int N;
 char str[MAXN];
 
 map<string, int> list;
 char country[MAXN];
 
 int main() {
-    scanf("%d", &n);
+    scanf("%d", &N);
     getchar();
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < N; i++) {
         gets(str);
         sscanf(str, "%s", country);
+
         string tmp(country);
         if (list.count(tmp)) list[tmp]++;
         else list[tmp] = 1;
     }
-    for (map<string, int>::iterator iter = list.begin();
-        iter != list.end();
-        ++iter)
-    {
-        printf("%s %d\n", iter->first.c_str(), iter->second);
-    }
+
+    for (iter i = list.begin(); i != list.end(); ++i)
+        printf("%s %d\n", i->first.c_str(), i->second);
 
     return 0;
 }
