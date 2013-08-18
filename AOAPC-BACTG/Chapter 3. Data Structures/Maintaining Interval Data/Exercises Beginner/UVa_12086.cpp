@@ -9,9 +9,20 @@ const int MAXN = 200002;
 
 struct Bit {
     int c[MAXN], n;
-    void init(int n) { memset(c, 0, sizeof(c)); this->n = n; }
-    void add(int x, int v) { while (x <= n) { c[x] += v; x += x & -x; } }
-    int sum(int x) { int ret = 0; while (x > 0) { ret += c[x]; x -= x & -x; } return ret; }
+
+    void init(int n) {memset(c, 0, sizeof(c)); this->n = n; }
+
+    void add(int x, int v) {
+        for (int i = x; i <= n; i += i & -i)
+            c[i] += v;
+    }
+
+    int sum(int x) {
+        int ret = 0;
+        for (int i = x; i > 0; i -= i & -i)
+            ret += c[i];
+        return ret;
+    }
 };
 
 int T, N, X, Y;
