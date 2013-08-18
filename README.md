@@ -1,11 +1,7 @@
-This is my code of the way to ACM-ICPC!
+这些是我为参加ACM-ICPC竞赛而训练时所敲的代码，大部分代码针对的题目属于UVa Online Judge，尤其是刘汝佳的专题。
 
-The code is used to solve some problems of UVa Online Judge, especially Rujia
-Liu's problems. Most problems can be found and explained in Rujia Liu's two
-books, AOAPC Beginning Algorithm Contests and AOAPC Beginning Algorithm
-Contests Training Guide.
+基本所有的题目都可以从刘汝佳的两本书——《算法竞赛入门经典》、《算法竞赛入门经典训练指南》中找到，因为这是我的训练中最主要的两本指导书。
 
-The ACM-ICPC and the two books are a great help to my programming capability
-and my road of the programmer, so I should thank ACM-ICPC and Rujia Liu.
+所以，在这里要感谢ACM-ICPC这项比赛和刘汝佳老师。因为他们，我的编程能力和解决问题的能力越来越强，更重要的是，因为他们，我开始了我的程序员生涯。
 
-HINT: The solutions of most problems can be found in [wiki](https://github.com/windalex/ACM-ICPC/wiki).
+备注：我同时也为我所做过的题目编写解题报告，解题报告的地址在项目的[Wiki](https://github.com/windalex/ACM-ICPC/wiki)中。
