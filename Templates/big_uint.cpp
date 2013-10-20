@@ -66,7 +66,7 @@ struct big_uint {
         for(int i = 0, x = 0; i < len; i++) {
             int tmp = d[i] - rhs.d[i] - x;
             if (tmp >= 0) x = 0;
-            else x = 1, tmp += 10;
+            else { x = 1; tmp += 10; }
             res.d[res.len++] = tmp;
         }
         res.clean();
@@ -86,7 +86,7 @@ struct big_uint {
         return res;
     }
 
-    // Compound Assignment Operators
+    // compound assignment operators
     big_uint operator+=(const big_uint& rhs) { return *this = *this + rhs; }
     big_uint operator*=(const big_uint& rhs) { return *this = *this * rhs; }
     big_uint operator-=(const big_uint& rhs) { return *this = *this - rhs; }

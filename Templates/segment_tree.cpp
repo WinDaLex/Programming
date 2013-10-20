@@ -50,7 +50,6 @@ struct segment_tree {
         update(pos);
         return res;
     }
-
 };
 
 // segment updated
@@ -61,7 +60,11 @@ struct seg {
 
 struct segment_tree {
     seg node[MAXN << 2];
-    void update(int pos) { node[pos].w = node[lson(pos)].w + node[rson(pos)].w; }
+
+    void update(int pos) {
+        node[pos].w = node[lson(pos)].w + node[rson(pos)].w;
+    }
+
     void build(int l, int r, int pos) {
         node[pos].flag = 0;
         if (l == r) {
@@ -73,6 +76,7 @@ struct segment_tree {
         build(m + 1, r, rson(pos));
         update(pos);
     }
+
     void push(int l, int r, int pos) {
         seg& father = node[pos];
         seg& lson = node[lson(pos)];
@@ -86,6 +90,7 @@ struct segment_tree {
             father.flag = 0;
         }
     }
+
     void modify(int l, int r, int pos, int x, int y, int z) {
         if (x <= l && r <= y) {
             int len = r + 1 - l;
@@ -100,6 +105,7 @@ struct segment_tree {
         if (y > m) modify(m + 1, r, rson(pos), x, y, z);
         update(pos);
     }
+
     int query(int l, int r, int pos, int x, int y) {
         if (x <= l && r <= y) return node[pos].w;
         push(l, r, pos);
