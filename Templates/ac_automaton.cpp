@@ -1,4 +1,4 @@
-struct ac_automaton {
+struct AcAutomaton {
     int ch[MAXM][ALPHA];
     int val[MAXM];
     int f[MAXM];
