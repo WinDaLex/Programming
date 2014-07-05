@@ -22,8 +22,7 @@ int main() {
             int num;
             scanf("%d", &num);
             if (binary_search(marbles, marbles + n, num))
-                printf("%d found at %d\n",
-                    num, lower_bound(marbles, marbles + n, num) - marbles + 1);
+                printf("%d found at %d\n", num, lower_bound(marbles, marbles + n, num) - marbles + 1);
             else
                 printf("%d not found\n", num);
         }
