@@ -1,4 +1,4 @@
-// UVaOJ 558
+// UVa 558
 // Wormholes
 // by A Code Rabbit
 

@@ -1,4 +1,4 @@
-// UVaOJ 10801
+// UVa 10801
 // Lift Hopping
 // by A Code Rabbit
 

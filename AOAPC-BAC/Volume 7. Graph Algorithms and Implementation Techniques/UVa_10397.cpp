@@ -1,4 +1,4 @@
-// UVaOJ 10397
+// UVa 10397
 // Connect the Campus
 // by A Code Rabbit
 

@@ -1,4 +1,4 @@
-// UVaOJ 10986
+// UVa 10986
 // Sending email
 // by A Code Rabbit
 
