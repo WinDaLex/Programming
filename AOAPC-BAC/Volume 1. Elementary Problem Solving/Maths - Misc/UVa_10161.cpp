@@ -1,4 +1,4 @@
-// UVaOJ 10161
+// UVa 10161
 // Ant on a Chessboard
 // by A Code Rabbit
 
@@ -11,8 +11,7 @@
 
 int n;
 
-int main()
-{
+int main() {
     while (scanf("%d", &n) && n) {
         int level = ceil(sqrt(n));
         LL up = SQR(level);
