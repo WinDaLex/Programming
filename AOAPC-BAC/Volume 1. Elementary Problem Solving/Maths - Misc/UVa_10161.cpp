@@ -2,28 +2,29 @@
 // Ant on a Chessboard
 // by A Code Rabbit
 
-#include <cmath>
 #include <cstdio>
 #include <cstdlib>
+#include <cmath>
 
-#define SQR(x) ((x)*(x))
-#define LL long long 
+typedef long long ll;
 
-int n;
+#define sqr(x) ((x)*(x))
+
+int N;
 
 int main() {
-    while (scanf("%d", &n) && n) {
-        int level = ceil(sqrt(n));
-        LL up = SQR(level);
-        LL down = SQR(level - 1) + 1;
-        LL middle = (up + down) / 2;
+    while (scanf("%d", &N) && N) {
+        int level = ceil(sqrt(N));
+        ll up = sqr(level);
+        ll down = sqr(level - 1) + 1;
+        ll mid = (up + down) / 2;
 
         int x, y;
-        if ((level % 2 == 1 && n < middle) || (level % 2 == 0 && n >= middle)) {
+        if ((level % 2 == 1 && N < mid) || (level % 2 == 0 && N >= mid)) {
             x = level;
-            y = level - abs(middle - n);
+            y = level - abs(mid - N);
         } else {
-            x = level - abs(middle - n);
+            x = level - abs(mid - N);
             y = level;
         }
 
