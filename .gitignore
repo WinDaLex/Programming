@@ -1,3 +1,7 @@
 a.out
 input
 input[0-9]*
+
+*~
+*.swp
+.DS_Store
